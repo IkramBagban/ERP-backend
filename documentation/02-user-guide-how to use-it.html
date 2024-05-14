@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no" />
+		<link rel="icon" href="assets/images/sam-logo.png" type="image/png">
+		<title>User Guide | SS Accounts Manager (SAM)</title>
+		<meta name="description" content="" />
+		<meta name="author" content="SS IT Village" />
+
+
+		<link rel="stylesheet" type="text/css" href="assets/plugin/bootstrap/css/bootstrap.min.css" />
+
+		<link rel="stylesheet" type="text/css" href="assets/plugin/font-awesome/css/all.min.css" />
+
+		<link rel="stylesheet" type="text/css" href="assets/plugin/magnific-popup/magnific-popup.min.css" />
+
+		<link rel="stylesheet" type="text/css" href="assets/plugin/highlight.js/styles/github.css" />
+
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	</head>
+	<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+		<div id="main-wrapper">
+			<header id="header" class="sticky-top">
+				<nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+					<div class="container-fluid">
+						<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button">
+							<span></span><span class="w-75"></span><span class="w-50"></span>
+						</button>
+
+						<a class="logo ml-md-3" href="index.html" title="SAM">
+							<img src="assets/images/sam-logo-color.png" alt="SAM" width="175px" height="40px" />
+						</a>
+						<span class="text-2 ml-2">v1.0.0</span>
+
+						<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav">
+							<span></span><span></span><span></span>
+						</button>
+
+						<ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+							<li class="social-icons-facebook">
+								<a data-toggle="tooltip" href="https://www.facebook.com/ssitvillage/" target="_blank" title data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a>
+							</li>
+							<li class="social-icons-twitter">
+								<a data-toggle="tooltip" href="https://www.twitter.com/ssitvillage/" target="_blank" title data-original-title="Twitter"><i class="fab fa-twitter"></i></a>
+							</li>
+							<li class="social-icons-dribbble">
+								<a data-toggle="tooltip" href="http://www.youtube.com/ssitvillage/" target="_blank" title data-original-title="Youtube"><i class="fab fa-youtube"></i></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+
+			<div id="content" role="main">
+				<div class="idocs-navigation bg-dark docs-navigation-dark">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link active" href="#getting_start">Getting Start</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#login">Login</a>
+						</li>
+						<li class="nav-item"> <a class="nav-link" href="#company_branch">Company & Branch</a>
+							<ul class="nav flex-column">
+								<li class="nav-item"> <a class="nav-link" href="#company">Company</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#company_package">Company Package</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#branch">Branch</a></li>
+							</ul>
+						</li>
+						<li class="nav-item"> <a class="nav-link" href="#accounts">Accounts</a>
+							<ul class="nav flex-column">
+								<li class="nav-item"> <a class="nav-link" href="#chart_of_accounts">Chart of Accounts</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#accounts_type">Accounts Type</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#accounts_link">Accounts Link</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#financial_year">Financial Year</a></li>
+							</ul>
+						</li>
+						<li class="nav-item"> <a class="nav-link" href="#voucher">Voucher</a>
+							<ul class="nav flex-column">
+								<li class="nav-item"> <a class="nav-link" href="#new_voucher">New Voucher</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#voucher_list">Voucher List</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#voucher_search">Voucher Search</a></li>
+							</ul>
+						</li>
+						<li class="nav-item"> <a class="nav-link" href="#accounts_report">Accounts Report</a>
+							<ul class="nav flex-column">
+								<li class="nav-item"> <a class="nav-link" href="#ledger_report">Ledger Report</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#balance_sheet">Balance Sheet</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#income_expenditure">Income & Expenditure</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#trial_balance">Trial Balance</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#receipts_payments">Receipts & Payments</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#balance_sheet_note">Balance Sheet Note</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#income_expenditure_note">Income & Expenditure Note</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#cash_book">Cash Book</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#bank_book">Bank Book</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#changes_in_equity">Changes in Equity</a></li>
+							</ul>
+						</li>
+						<li class="nav-item"> <a class="nav-link" href="#users">Users</a>
+							<ul class="nav flex-column">
+								<li class="nav-item"> <a class="nav-link" href="#user_list">User List</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#user_group">User Group</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#my_profile">My Profile</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#profile_picture">Profile Picture</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#change_password">Change Password</a></li>
+							</ul>
+						</li>
+						<li class="nav-item"> <a class="nav-link" href="#settings">Settings</a>
+							<ul class="nav flex-column">
+								<li class="nav-item"> <a class="nav-link" href="#system_setup">System Setup</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#system_logo">System Logo</a></li>
+								<li class="nav-item"> <a class="nav-link" href="#language">Language</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#how_to_use">Video Tutorial</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="idocs-content">
+					<div class="container-fluid">
+						<section id="getting_start">
+							<h2 class="text-uppercase text-success m-0">Getting Start (User Guide)</h2><hr/>
+
+							<h4 class="text-uppercase m-0">Welcome to SS Accounts Manager</h4><hr/>
+							<p class="lead text-justify">
+								<strong>SS ACCOUNTS MANAGER (SAM)</strong> is Software as a Service (SaaS) base complete accounts solution. It is Financial Accounts Software. It’s developed by React.js, Next.js, Bootstrap CSS, HTML5 on Frontend and Rest API integration with Node.js, Express.js and MySQL Database Sequelize ORM on Backend. This software has unlimited Company, Branch, Users and multiple Role base Super Admin, System Admin, Company Admin and Accounts User. You can get all types of Financial Accounts Reports in this Software.
+							</p>
+
+							<h4 class="text-uppercase m-0">Main Features</h4><hr/>
+							<ul>
+								<li>Multiple Company </li>
+								<li>Unlimited Branch</li>
+								<li>Unlimited Users</li>
+								<li>Chart of Accounts</li>
+								<li>Financial Year</li>
+								<li>Receive Voucher</li>
+								<li>Payment Voucher</li>
+								<li>Journal Voucher</li>
+								<li>Contra Voucher</li>
+								<li>Ledger Report</li>
+								<li>Balance Sheet</li>
+								<li>Income &amp; Expenditure</li>
+								<li>Trial Balance</li>
+								<li>Receipts &amp; Payments</li>
+								<li>Balance Sheet Note</li>
+								<li>Income &amp; Expenditure Note</li>
+								<li>Cash Book</li>
+								<li>Bank Book</li>
+								<li>Changes in Equity</li>
+							</ul><hr/>
+							
+							
+							<h3>SOFTWARE MODULE:</h3><hr/>
+							<ul>
+							  <li><strong>SUPER  ADMIN:</strong>
+								<ul>
+								  <li><strong>Company &amp; Branch</strong>
+									<ul>
+									  <li>Company (Add/Edit/Delete)</li>
+									  <li>Company Package (Add/Edit/Delete)</li>
+									  <li>Branch (Add/Edit/Delete)</li>
+									</ul>
+								  </li>
+								  <li><strong>Accounts</strong>
+									<ul>
+									  <li>Chart of Accounts (Add/Edit/Delete)</li>
+									  <li>Accounts Type (Add/Edit/Delete)</li>
+									  <li>Accounts Link (Add/Edit)</li>
+									  <li>Financial Year (Add/Edit)</li>
+									</ul>
+								  </li>
+								  <li><strong>Voucher</strong>
+									<ul>
+									  <li>New Voucher</li>
+									  <li>Voucher List (Edit/Delete)</li>
+									  <li>Voucher Search </li>
+									</ul>
+								  </li>
+								  <li><strong>Accounts Report</strong>
+									<ul>
+									  <li>Ledger Report</li>
+									  <li>Balance Sheet</li>
+									  <li>Income &amp; Expenditure</li>
+									  <li>Trial Balance</li>
+									  <li>Receipts &amp; Payments</li>
+									  <li>Balance Sheet Note</li>
+									  <li>Income &amp; Expenditure Note</li>
+									  <li>Cash Book</li>
+									  <li>Bank Book</li>
+									  <li>Changes in Equity</li>
+									</ul>
+								  </li>
+								  <li><strong>Users</strong>
+									<ul>
+									  <li>User List (Add/Edit/Delete)</li>
+									  <li>User Group (Add/Edit)</li>
+									  <li>My Profile</li>
+									  <li>Profile Picture</li>
+									  <li>Change Password</li>
+									</ul>
+								  </li>
+								</ul>
+							  </li>
+							</ul>
+
+							<ul>
+							  <li><strong>SYSTEM  ADMIN:</strong>
+								<ul>
+								  <li><strong>Company &amp; Branch</strong>
+									<ul>
+									  <li>Company (Add/Edit)</li>
+									  <li>Company Package (Add/Edit)</li>
+									  <li>Branch (Add/Edit)</li>
+									</ul>
+								  </li>
+								  <li><strong>Accounts</strong>
+									<ul>
+									  <li>Chart of Accounts (Add/Edit)</li>
+									  <li>Accounts Type (Add/Edit)</li>
+									  <li>Accounts Link (Add/Edit)</li>
+									  <li>Financial Year (Add/Edit)</li>
+									</ul>
+								  </li>
+								  <li><strong>Voucher</strong>
+									<ul>
+									  <li>New Voucher</li>
+									  <li>Voucher List (Edit)</li>
+									  <li>Voucher Search </li>
+									</ul>
+								  </li>
+								  <li><strong>Accounts Report</strong>
+									<ul>
+									  <li>Ledger Report</li>
+									  <li>Balance Sheet</li>
+									  <li>Income &amp; Expenditure</li>
+									  <li>Trial Balance</li>
+									  <li>Receipts &amp; Payments</li>
+									  <li>Balance Sheet Note</li>
+									  <li>Income &amp; Expenditure Note</li>
+									  <li>Cash Book</li>
+									  <li>Bank Book</li>
+									  <li>Changes in Equity</li>
+									</ul>
+								  </li>
+								  <li><strong>Users</strong>
+									<ul>
+									  <li>User List (Add/Edit/)</li>
+									  <li>User Group (Add/Edit)</li>
+									  <li>My Profile</li>
+									  <li>Profile Picture</li>
+									  <li>Change Password</li>
+									</ul>
+								  </li>
+								</ul>
+								</li>
+							</ul>
+							<ul>
+							  <li><strong>COMPANY  ADMIN:</strong>
+								<ul>
+								  <li><strong>Company &amp; Branch</strong>
+									<ul>
+									  <li>Company (Edit)</li>
+									  <li>Branch (Add/Edit)</li>
+									</ul>
+								  </li>
+								  <li><strong>Accounts</strong>
+									<ul>
+									  <li>Chart of Accounts (Add/Edit)</li>
+									  <li>Accounts Link (Add/Edit)</li>
+									  <li>Financial Year (Add/Edit)</li>
+									</ul>
+								  </li>
+								  <li><strong>Voucher</strong>
+									<ul>
+									  <li>New Voucher</li>
+									  <li>Voucher List (Edit)</li>
+									  <li>Voucher Search </li>
+									</ul>
+								  </li>
+								  <li><strong>Accounts Report</strong>
+									<ul>
+									  <li>Ledger Report</li>
+									  <li>Balance Sheet</li>
+									  <li>Income &amp; Expenditure</li>
+									  <li>Trial Balance</li>
+									  <li>Receipts &amp; Payments</li>
+									  <li>Balance Sheet Note</li>
+									  <li>Income &amp; Expenditure Note</li>
+									  <li>Cash Book</li>
+									  <li>Bank Book</li>
+									  <li>Changes in Equity</li>
+									</ul>
+								  </li>
+								  <li><strong>Users</strong>
+									<ul>
+									  <li>User List (Add/Edit/)</li>
+									  <li>My Profile</li>
+									  <li>Profile Picture</li>
+									  <li>Change Password</li>
+									</ul>
+									</li>
+								</ul>
+							  </li>
+							 </ul>
+							 <ul>
+								<li><strong>ACCOUNTS USER:</strong>
+								  <ul>
+									  <li><strong>Company &amp; Branch</strong>
+										<ul>
+										  <li>Branch</li>
+										</ul>
+									  </li>
+									  <li><strong>Accounts</strong>
+										<ul>
+										  <li>Chart of Accounts</li>
+										  <li>Financial Year</li>
+										</ul>
+									  </li>
+									  <li><strong>Voucher</strong>
+										<ul>
+										  <li>New Voucher</li>
+										  <li>Voucher List</li>
+										  <li>Voucher Search </li>
+										</ul>
+									  </li>
+									  <li><strong>Accounts Report</strong>
+										<ul>
+										  <li>Ledger Report</li>
+										  <li>Balance Sheet</li>
+										  <li>Income &amp; Expenditure</li>
+										  <li>Trial Balance</li>
+										  <li>Receipts &amp; Payments</li>
+										  <li>Balance Sheet Note</li>
+										  <li>Income &amp; Expenditure Note</li>
+										  <li>Cash Book</li>
+										  <li>Bank Book</li>
+										  <li>Changes in Equity</li>
+										</ul>
+									  </li>
+									  <li><strong>Users</strong>
+										<ul>
+										  <li>My Profile</li>
+										  <li>Profile Picture</li>
+										  <li>Change Password</li>
+										</ul>
+									  </li>
+								  </ul>
+								</li>
+							</ul><hr/>
+							<div class="row">
+								<div class="col-sm-6 col-lg-6">
+									<ul class="list-unstyled">
+										<li><strong>Item Name:</strong> SS ACCOUNTS MANAGER (SAM)</li>
+										<li>
+										<strong>Author:</strong>
+										<a href="http://www.ssitvillage.com/" target="_blank">SS IT Village</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-sm-6 col-lg-6">
+								<ul class="list-unstyled">
+								<li>
+								<strong class="font-weight-700">Release:</strong> 2023
+								</li>
+								<li><strong>Version:</strong> 1.0.0</li>
+
+								</ul>
+								</div>
+							</div>
+							<p class="alert alert-info">
+							If you have any questions that are beyond the scope of this help file, Please feel free to email via
+							<a href="mainto:support@ssitvillage.com">support@ssitvillage.com</a>.
+							</p>
+						</section>
+
+						<hr class="divider" />
+						<section id="login">
+							<h2 class="text-uppercase text-success m-0">Login Page</h2><hr/>
+
+							<h4 class="text-uppercase m-0">Welcome to SS Accounts Manager</h4>
+
+							<p class="text-uppercase m-0">Login to Your Account</p><hr/>
+							<ul>
+								<li>Go to Login Page<code>http://example.com/login</code> or <code>http://localhost:3000/login</code></li>
+								<li>Enter Username & Password<br/>
+									<p><strong>Super  Admin:</strong><br>
+										Username:  sadmin<br>
+										Password:  123456
+									</p>
+									<p><strong>System  Admin:</strong><br>
+										Username:  admin<br>
+										Password:  123456
+									</p>
+									<p><strong>Company  Admin:</strong><br>
+										Username:  company<br>
+										Password:  123456
+									</p>
+									<p><strong>Accounts  User:</strong><br>
+										<strong>Brach1</strong><br>
+										Username:  user1<br>
+										Password:  123456<br>
+										Username:  user2<br>
+										Password:  123456
+									</p>
+									<p><strong>Brach2</strong><br>
+									Username:  user3<br>
+									Password:  123456<br>
+									Username:  user4<br>
+									Password:  123456
+									</p>
+									<img class="img-fluid" src="assets/images/install/login-page.png" alt="" /><br/>
+								</li>
+								<li>Dashboard after Login</li>
+									<img class="img-fluid" src="assets/images/install/6-dashboard.png" alt="" />
+								</li>
+							</ul>
+						</section>
+
+						<hr class="divider" />
+						<section id="company_branch">
+							<h2 class="text-uppercase text-success m-0">Company & Branch</h2>
+
+							<p class="m-0">This Software is Software as a Service (SaaS) base for multiple company, Branch & Users. Super Admin & System Admin can created New Company or Company Authorized Person can register for using this software, then super admin or system admin active this company</p>
+
+							<ul>
+								<li><a href="#company">Company</a></li>
+								<li><a href="#company_package">Company Package</a></li>
+								<li><a href="#branch">Branch</a></li>
+							</ul>
+
+							<hr class="divider" />
+
+							<div class="container-fluid">
+								<div class="row" id="company">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Company Register & Information</h4>
+										<p class="text-justify">There are two type company register: admin section & company own register</p>
+										<hr/>
+										<ul>
+											<li>How to Register a New Company for Super Admin or System Admin<br/>
+												<img class="img-fluid" src="assets/images/install/4-company.png" alt="" />
+											</li>
+											<li>How to Register a New Company<br/>
+												<img class="img-fluid" src="assets/images/install/5-company.png" alt="" />
+												<img class="img-fluid" src="assets/images/install/6-company.png" alt="" />
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="company_package">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Company Package</h4>
+										<p class="text-justify">Company Package access only Super Admin & System Admin</p>
+										<hr/>
+										<ul>
+											<li>Company Package Create & List<br/>
+												<img class="img-fluid" src="assets/images/install/7-company-package.png" alt="" />
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="branch">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Company Branch</h4>
+										<p class="text-justify">Company Create Unlimited Branch</p>
+										<hr/>
+										<ul>
+											<li>Branch Create & List<br/>
+												<img class="img-fluid" src="assets/images/install/8-branch.png" alt="" />
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<hr class="divider" />
+						<section id="accounts">
+							<h2 class="text-uppercase text-success m-0">Accounts</h2>
+
+							<p class="m-0">Chart of Accounts, Accounts Type, Accounts Link, Financial Year</p>
+							<ul>
+								<li><a href="#chart_of_accounts">Chart of Accounts</a></li>
+								<li><a href="#accounts_type">Accounts Type</a></li>
+								<li><a href="#accounts_link">Accounts Link</a></li>
+								<li><a href="#financial_year">Financial Year</a></li>
+							</ul>
+							<hr class="divider" />
+
+							<div class="container-fluid">
+								<div class="row" id="chart_of_accounts">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Chart of Accounts</h4>
+										<p class="text-justify">Chart of Accounts will be generated when the company is registered, Company can add, edit Chart of Accounts</p>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/9-chart-of-accounts.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="accounts_type">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Accounts Type</h4>
+										<p class="text-justify">Accounts Type access only Super Admin & System Admin</p>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/10-accounts-type.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="accounts_link">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Accounts Link</h4>
+										<p class="text-justify">Accounts Link access only Super Admin & System Admin</p>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/11-accounts-link.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="financial_year">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Financial Year</h4>
+										<p class="text-justify">Financial Year most important part for company accounts report, Company Admin, Super Admin & System Admin can change financial year</p>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/12-financial-year.png" alt="" />
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<hr class="divider" />
+						<section id="voucher">
+							<h2 class="text-uppercase text-success m-0">Voucher</h2>
+							<p align="justify">A voucher accounting is typically  a part of a manual payment system with a strong control mechanism. The vouchers  are prepared with the help of source documents such as challans, counterfoils,  cheque books, receipts, bank deposit slips, bills, cash memos, and other  information. The source documents are relevant to the financial transaction and  also vouch for the existence of such transactions.<br>
+								The data and information on a  voucher normally contain are as mentioned below:
+							</p>
+							<ul>
+								<li>Voucher number</li>
+								<li>Date and types of accounting vouchers</li>
+								<li>Credit and debit column</li>
+								<li>Particulars column- It includes a brief  description of the record of the transaction</li>
+								<li>Column for total</li>
+								<li>Approval stamp and signature of accountant</li>
+								<li>Authorized signature of the higher authority</li>
+							</ul>
+
+							<p class="m-0">New Voucher, Voucher List, Voucher Search</p>
+								<ul class="">
+									<li class=""> <a class="" href="#new_voucher">New Voucher</a></li>
+									<li class=""> <a class="" href="#voucher_list">Voucher List</a></li>
+									<li class=""> <a class="" href="#voucher_search">Voucher Search</a></li>
+								</ul>
+							<hr class="divider" />
+
+							<div class="container-fluid">
+								<div class="row" id="new_voucher">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">New Voucher</h4>
+										<p class="text-justify">Can Create Four Type Voucher</p>
+										<ol>
+											<li><strong>Receive Voucher:<br>
+											</strong>The bank or  cash receipts are recorded through a receipt voucher. The receipt voucher is of  two types, namely bank receipt voucher and cash receipt voucher. A cash receipt  voucher is prepared for the amount received in cash. The bank receipt vouchers  record the receipt of the demand draft or cheque. This implies that the amount is  received in the bank instead of cash.</li>
+
+											<li><strong>Payment Voucher:<br>
+											</strong>The payment  voucher is opposite to the receipt voucher. While receipt voucher poses the  inflow of funds, payment voucher depicts the transactions that have an outflow  of funds. The focus of preparing payment vouchers is to record the cash and  bank transactions for payment in an organisation.</li>
+
+											<li><strong>Journal Voucher:<br>
+											</strong>Journal  vouchers are also known as transfer vouchers or non-cash vouchers. All the  transactions that do not involve cash or bank transactions or inflow and  outflow of amounts are passed through journal vouchers. They are authentic  documentary proof for the financial transaction.</li>
+
+											<li><strong>Contra Voucher:<br>
+											</strong>Contra entry is also  known as contra vouchers. In simple words, we can say that contra entry is any  transaction involving a transfer of cash between two cash accounts or between a  cash account to a bank account or even between a bank account to another.</li>
+										</ol>
+										<hr/>
+										<ul>
+											<li>Receive Voucher<br/>
+												<img class="img-fluid" src="assets/images/install/13-new-voucher.png" alt="" />
+											</li>
+											<li>Payment Voucher<br/>
+												<img class="img-fluid" src="assets/images/install/13-new-voucher-1.png" alt="" />
+											</li>
+											<li>Journal Voucher<br/>
+												<img class="img-fluid" src="assets/images/install/13-new-voucher-2.png" alt="" />
+											</li>
+											<li>Contra Voucher<br/>
+												<img class="img-fluid" src="assets/images/install/13-new-voucher-3.png" alt="" />
+											</li>
+											<li>After Save<br/>
+												<img class="img-fluid" src="assets/images/install/13-new-voucher-4.png" alt="" />
+											</li>
+											<li>View Voucher<br/>
+												<img class="img-fluid" src="assets/images/install/13-new-voucher-5.png" alt="" />
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="voucher_list">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Voucher List</h4>
+										<p class="text-justify">Voucher list filter by date wise</p>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/14-voucher-list.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="voucher_search">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Voucher Search</h4>
+										<p class="text-justify">Voucher search by voucher number</p>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/15-voucher-search.png" alt="" />
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<hr class="divider" />
+						<section id="accounts_report">
+							<h2 class="text-uppercase text-success m-0">Accounts Report</h2>
+
+							<p class="m-0">Get All kind of Accounts Report</p>
+							<ul class="">
+								<li class=""> <a class="" href="#ledger_report">Ledger Report</a></li>
+								<li class=""> <a class="" href="#balance_sheet">Balance Sheet</a></li>
+								<li class=""> <a class="" href="#income_expenditure">Income & Expenditure</a></li>
+								<li class=""> <a class="" href="#trial_balance">Trial Balance</a></li>
+								<li class=""> <a class="" href="#receipts_payments">Receipts & Payments</a></li>
+								<li class=""> <a class="" href="#balance_sheet_note">Balance Sheet Note</a></li>
+								<li class=""> <a class="" href="#income_expenditure_note">Income & Expenditure Note</a></li>
+								<li class=""> <a class="" href="#cash_book">Cash Book</a></li>
+								<li class=""> <a class="" href="#bank_book">Bank Book</a></li>
+								<li class=""> <a class="" href="#changes_in_equity">Changes in Equity</a></li>
+							</ul>
+							<hr class="divider" />
+
+							<div class="container-fluid">
+								<div class="row" id="ledger_report">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Ledger Report</h4>
+										<ul>
+											<li>The ledger is a master of all accounts of your  business and is primarily used for monitoring your business&rsquo;s financial  activity. It details all business accounts and account activity during a  period.</li>
+											<li>Before computers, when record-keeping was done  by hand, accountants would maintain three journals: accounts receivable,  accounts payable, and payroll. The summaries of these journals would be  recorded in the general ledger.</li>
+											<li>Ledger Report search by Date Wise</li>
+										</ul>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/16-accounts-report.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="balance_sheet">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Balance Sheet</h4>
+										<ul>
+											<li>The balance sheet refers to a financial statement that reports a company's assets, liabilities, and shareholder equity at a specific point in time. Balance sheets provide the basis for computing rates of return for investors and evaluating a company's capital structure.</li>
+											<li>Balance Sheet search by Closing Month </li>
+										</ul>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/14.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="income_expenditure">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Income & Expenditure</h4>
+										<ul>
+											<li>The income and expenditure account is prepared by the non-trading entities to determine surplus or deficit of income over expenditures for a particular time frame. The accumulated or accrual concept of accounting is rigidly pursued while preparing income and expenditure a/c of non-trading concerns. It is prepared as a portion of final accounts of non-trading entities and is equal to the profit and loss account outlined by for-profit business entities.</li>
+											<li>Income & Expenditure search by Closing Month </li>
+										</ul>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/15.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="trial_balance">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Trial Balance</h4>
+										<ul>
+											<li>In addition to error detection, the trial balance is prepared to make the necessary adjusting entries to the general ledger. It is prepared again after the adjusting entries are posted to ensure that the total debits and credits are still balanced. It is not an official financial statement.</li>
+											<li>Trial Balance search by Closing Date </li>
+										</ul>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/16.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="receipts_payments">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Receipts Payments</h4>
+										<ul>
+											<li>Receipt and payment account functions as a summary of cash payments and receipts of an organisation during an accounting period. It provides a picture of the cash position of a Not-for-Profit organisation. It does not differentiate between the receipts and payments, whether they are of capital or revenue in nature and records all cash and bank transactions of both capital and revenue nature.</li>
+											<li>Receipt and payment account does not include any non-cash transactions such as depreciation. The Receipt and payment account is prepared at the end of an accounting period.</li>
+											<li>Receipts Payments search by Date Wise </li>
+										</ul>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/17.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="balance_sheet_note">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Balance Sheet Note</h4>
+										<p class="text-justify">Balance Sheet Note is Details of Balance Sheet Report it's search by closing month</p>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/18.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="income_expenditure_note">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Income & Expenditure Note</h4>
+										<p class="text-justify">Income & Expenditure Note is Details of Income & Expenditure Report it's search by closing month</p>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/19.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="cash_book">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Cash Book</h4>
+										<ul>
+											<li>A cash book is a financial journal that contains  all cash receipts and disbursements, including bank deposits and withdrawals.  This is the main area where businesses record any and all cash-related  information. Entries are normally divided into cash payments &amp; receipts.</li>
+											<li>Cash Book search by Date Wise</li>
+										</ul>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/20.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="bank_book">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Bank Book</h4>
+										<ul>
+											<li>Bank Book or Bank Journal is a subsidiary book of accounts that accountants use to maintain records of the banking transactions at their end. It records all the receipts and payments made through the bank. In simple terms, the bank book is a book that records deposits, withdrawals, checks received, and issued. Often it is misunderstood as a passbook. But, both of them are different from each other.</li>
+											<li>A passbook is a record of transactions provided by the bank that is similar to a bank statement or a bank statement in book form.</li>
+											<li>Whereas the bank book is an accounting ledger that a company maintains to keep track of transactions at their end. It is often mixed with bank statements but in fact, both are different from each other. Generally, businesses with higher volumes of banking transactions maintain this book.</li>
+											<li>Whereas small and medium-sized businesses use the cash book to record these entries.</li>
+											<li>Bank Book search by Date Wise </li>
+										</ul>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/21-1.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="changes_in_equity">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Changes in Equity</h4>
+										<ul>
+											<li>A statement of change in equity (also referred to as statement of retained earnings) is a business' financial statement that measures the changes in owners' equity throughout a specific accounting period. It covers the following elements: Net profit or loss. Dividend payments.</li>
+											<li>Changes in Equity search by Date Wise </li>
+										</ul>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/21.png" alt="" />
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<hr class="divider" />
+						<section id="users">
+							<h2 class="text-uppercase text-success m-0">Users</h2>
+
+							<p class="m-0">SS Accounts Manager (SAM) Multiple User base software</p>
+								<ul class="">
+									<li class=""> <a class="" href="#user_list">User List</a></li>
+									<li class=""> <a class="" href="#user_group">User Group</a></li>
+									<li class=""> <a class="" href="#my_profile">My Profile</a></li>
+									<li class=""> <a class="" href="#profile_picture">Profile Picture</a></li>
+									<li class=""> <a class="" href="#change_password">Change Password</a></li>
+								</ul>
+							<hr class="divider" />
+
+							<div class="container-fluid">
+								<div class="row" id="user_list">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">User List</h4>
+										<p class="text-justify">Super Admin, System Admin & Company Admin Access User List, Add/Edit/Delete User</p>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/23.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="user_group">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">User Group</h4>
+										<p class="text-justify">Super Admin & System Admin Access User Group</p>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/24.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="my_profile">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">My Profile</h4>
+										<p class="text-justify">User can Change her profile</p>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/25.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="profile_picture">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Profile Picture</h4>
+										<p class="text-justify">User can Change her profile picture</p>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/26.png" alt="" />
+									</div>
+								</div>
+
+								<hr class="divider" />
+								<div class="row" id="change_password">
+									<div class="col-md-12 docs-content-inner">
+										<p class="text-justify">User can Change her password</p>
+										<h4 class="text-uppercase m-0">Change Password</h4>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/27.png" alt="" />
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<hr class="divider" />
+						<section id="settings">
+							<h2 class="text-uppercase text-success m-0">Settings</h2>
+
+							<p class="m-0">Setting option access only Super Admin & System Admin</p>
+							<ul class="">
+								<li class=""> <a class="" href="#system_setup">System Setup</a></li>
+								<li class=""> <a class="" href="#system_logo">System Logo</a></li>
+								<li class=""> <a class="" href="#language">Language</a></li>
+							</ul>
+
+							<div class="container-fluid">
+								<div class="row" id="system_setup">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">System Setup</h4>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/22.png" alt="" />
+									</div>
+								</div>
+								<hr class="divider" />
+								<div class="row" id="system_logo">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">System Logo</h4>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/22-1.png" alt="" />
+									</div>
+								</div>
+								<hr class="divider" />
+								<div class="row" id="language">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Language</h4>
+										<p class="m-0">All User Setup language like as, English, Bangla, Spanish</p>
+										<hr/>
+										<img class="img-fluid" src="assets/images/install/28.png" alt="" />
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<hr class="divider" />
+						<section id="how_to_use">
+							<h2 class="text-uppercase text-success m-0">Video Tutorial</h2>
+
+							<p class="m-0">How to use SS Accounts Manger</p>
+
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12 d-flex justify-content-center">
+										<iframe width="1280" height="693" src="https://www.youtube.com/embed/6nMRA8zQfRE" title="How to Use SS Accounts Manager (SAM)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<hr class="divider" />
+						<section id="about">
+							<div class="row">
+								<div class="col-sm-6 col-lg-6">
+									<ul class="list-unstyled">
+										<li><strong>Item Name:</strong> SS ACCOUNTS MANAGER (SAM)</li>
+										<li>
+										<strong>Author:</strong>
+										<a href="http://www.ssitvillage.com/" target="_blank">SS IT Village</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-sm-6 col-lg-6">
+									<ul class="list-unstyled">
+										<li><strong class="font-weight-700">Release:</strong> 2023</li>
+										<li><strong>Version:</strong> 1.0.0</li>
+									</ul>
+								</div>
+							</div>
+							<p class="alert alert-info">
+								If you have any questions that are beyond the scope of this help file, Please feel free to email via
+								<a href="mainto:support@ssitvillage.com">support@ssitvillage.com</a>.
+							</p>
+						</section>
+					</div>
+				</div>
+				<footer id="footer" class="section bg-dark footer-text-light">
+					<div class="container">
+						<p class="text-center"> Copyright &copy; 2023 All Rights Reserved <a href="https://accounts.ssitvillage.com/" target="_blank">SS Accounts Manager </a></p>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+
+		<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
+
+		<script src="assets/plugin/jquery/jquery.min.js"></script>
+		<script src="assets/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<script src="assets/plugin/highlight.js/highlight.min.js"></script>
+
+		<script src="assets/plugin/jquery.easing/jquery.easing.min.js"></script>
+
+		<script src="assets/plugin/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+		<script src="assets/js/theme.js"></script>
+	</body>
+</html>

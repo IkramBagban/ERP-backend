@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no" />
+		<link rel="icon" href="assets/images/sam-logo.png" type="image/png">
+		<title>Installation | SS Accounts Manager (SAM)</title>
+		<meta name="description" content="" />
+		<meta name="author" content="SS IT Village" />
+
+
+		<link rel="stylesheet" type="text/css" href="assets/plugin/bootstrap/css/bootstrap.min.css" />
+
+		<link rel="stylesheet" type="text/css" href="assets/plugin/font-awesome/css/all.min.css" />
+
+		<link rel="stylesheet" type="text/css" href="assets/plugin/magnific-popup/magnific-popup.min.css" />
+
+		<link rel="stylesheet" type="text/css" href="assets/plugin/highlight.js/styles/github.css" />
+
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	</head>
+	<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+		<!-- <div class="preloader">
+		<div class="lds-ellipsis">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		</div>
+		</div> -->
+
+		<div id="main-wrapper">
+			<header id="header" class="sticky-top">
+				<nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+					<div class="container-fluid">
+						<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button">
+							<span></span><span class="w-75"></span><span class="w-50"></span>
+						</button>
+
+						<a class="logo ml-md-3" href="index.html" title="SAM">
+							<img src="assets/images/sam-logo-color.png" alt="SAM" width="175px" height="40px" />
+						</a>
+						<span class="text-2 ml-2">v1.0.0</span>
+
+						<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav">
+							<span></span><span></span><span></span>
+						</button>
+
+						<ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+							<li class="social-icons-facebook">
+								<a data-toggle="tooltip" href="https://www.facebook.com/ssitvillage/" target="_blank" title data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a>
+							</li>
+							<li class="social-icons-twitter">
+								<a data-toggle="tooltip" href="https://www.twitter.com/ssitvillage/" target="_blank" title data-original-title="Twitter"><i class="fab fa-twitter"></i></a>
+							</li>
+							<li class="social-icons-dribbble">
+								<a data-toggle="tooltip" href="http://www.youtube.com/ssitvillage/" target="_blank" title data-original-title="Youtube"><i class="fab fa-youtube"></i></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+
+			<div id="content" role="main">
+				<div class="idocs-navigation bg-dark docs-navigation-dark">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link active" href="#getting_start">Getting Start</a>
+						</li>
+						<li class="nav-item"> <a class="nav-link" href="#installation">Installation</a>
+							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a class="nav-link" href="#localhost_installation">Local Computer</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#cpanel_installation">CPanel</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#gigital_ocean_installation">DigitalOcean</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#login">Run Application</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="idocs-content">
+					<div class="container-fluid">
+						<section id="getting_start">
+							<h2 class="text-uppercase text-success m-0">Getting Start</h2><hr/>
+
+							<h4 class="text-uppercase m-0">Welcome to SS Accounts Manager</h4><hr/>
+							<p class="lead text-justify">
+								<strong>SS ACCOUNTS MANAGER (SAM)</strong> is Software as a Service (SaaS) base complete accounts solution. It is Financial Accounts Software. It’s developed by React.js, Next.js, Bootstrap CSS, HTML5 on Frontend and Rest API integration with Node.js, Express.js and MySQL Database Sequelize ORM on Backend. This software has unlimited Company, Branch, Users and multiple Role base Super Admin, System Admin, Company Admin and Accounts User. You can get all types of Financial Accounts Reports in this Software.
+							</p>
+
+							<h4 class="text-uppercase m-0">Main Features</h4><hr/>
+							<ul>
+								<li>Multiple Company </li>
+								<li>Unlimited Branch</li>
+								<li>Unlimited Users</li>
+								<li>Chart of Accounts</li>
+								<li>Financial Year</li>
+								<li>Receive Voucher</li>
+								<li>Payment Voucher</li>
+								<li>Journal Voucher</li>
+								<li>Contra Voucher</li>
+								<li>Ledger Report</li>
+								<li>Balance Sheet</li>
+								<li>Income &amp; Expenditure</li>
+								<li>Trial Balance</li>
+								<li>Receipts &amp; Payments</li>
+								<li>Balance Sheet Note</li>
+								<li>Income &amp; Expenditure Note</li>
+								<li>Cash Book</li>
+								<li>Bank Book</li>
+								<li>Changes in Equity</li>
+							</ul><hr/>
+							<div class="row">
+								<div class="col-sm-6 col-lg-6">
+									<ul class="list-unstyled">
+										<li><strong>Item Name:</strong> SS ACCOUNTS MANAGER (SAM)</li>
+										<li>
+										<strong>Author:</strong>
+										<a href="http://www.ssitvillage.com/" target="_blank">SS IT Village</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-sm-6 col-lg-6">
+								<ul class="list-unstyled">
+								<li>
+								<strong class="font-weight-700">Release:</strong> 2023
+								</li>
+								<li><strong>Version:</strong> 1.0.0</li>
+
+								</ul>
+								</div>
+							</div>
+							<p class="alert alert-info">
+							If you have any questions that are beyond the scope of this help file, Please feel free to email via
+							<a href="mainto:support@ssitvillage.com">support@ssitvillage.com</a>.
+							</p>
+						</section>
+
+						<hr class="divider" />
+						<section id="installation">
+							<h2 class="text-uppercase text-success m-0">Installation</h2><hr/>
+
+							<h4 class="text-uppercase m-0">Minimum Requirements</h4><hr/>
+							<ul>
+								<li>1 Core CPU</li>
+								<li>2GB RAM</li>
+								<li>10GB HDD/SDD</li>
+								<li>64 bit Operating System</li>
+								<li>Node.js Version v20</li>
+								<li>NPM Version v9</li>
+							</ul><hr/>
+
+							<h4 class="text-uppercase m-0">Installation Guide</h4><hr/>
+							<p>Supported Own Server, CPanel, VPS Server, Dedicated Server</p>
+							<ul>
+								<li><a href="#localhost_installation">Localhost</a></li>
+								<li><a href="#cpanel_installation">CPanel</a></li>
+								<li><a href="#gigital_ocean_installation">DigitalOcean</a></li>
+							</ul>
+							<hr class="divider" />
+							<h4 class="text-uppercase m-0">Installation Video</h4><hr/>
+							<div class="col-md-12 d-flex justify-content-center">
+								<iframe width="1255" height="706" src="https://www.youtube.com/embed/CBTk5c5z1_8" title="How to Install SS Accounts Manager (SAM)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							</div>
+							
+							<hr class="divider" />
+
+							<div class="container-fluid">
+								<div class="row" id="localhost_installation">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">Local Computer Installation</h4><hr/>
+
+										<h6 class="text-uppercase font-weight-bold m-0">Step 1 (Environment Config):</h6>
+										<ol>
+											<li>Download the Node.js from <a href="https://nodejs.org/en/download" target="_blank">https://nodejs.org/en/download</a></li>
+											<li>Run the installer and follow the prompts to install Node.js and npm</li>
+											<li>Open a command prompt or PowerShell with administrator privileges.</li>
+											<li>You can check (whether it is installed correctly) Node.js version and npm version<br/> <code>node-v</code> and <code>npm-v</code></li>
+											<li>Install PM2 globally by running the following command:<br/> <code>npm i pm2 -g</code></li>
+										</ol><hr/>
+
+										<h6 class="text-uppercase font-weight-bold m-0">Step 2 (Database):</h6>
+										<p>We are used MySQL Database.<br/>MySQL is a widely used relational database management system (RDBMS),  MySQL is free and open-source, MySQL is ideal for both small and large applications.</p>
+										<p>We are install MySQl DB using XAMPP<br/> XAMPP is a free and Open-source cross-platform Web Server Solution Stack built by Apache Friends, which consists mostly of the Apache HTTP Server, MariaDB/MySQL Database. Download on the <a href="https://www.apachefriends.org/de/download.html">Apache Friends</a> Website and install XAMPP </p>
+										<ol>
+											<li>Go to your system’s XAMPP folder or simply click the XAMPP Icon to open it. The Control Panel is now visible, and you may use it to start or stop any module.</li>
+											<li>Select the “Start” option for the Apache and MySQL modules, respectively.</li>
+											<li>Next, select the MySQL Module and click the “Admin” button. The user is immediately redirected to the following address in a web browser:<code>http://localhost/phpmyadmin</code></li>
+											<li>Create a Database like as <code>accounts</code></li>
+											<li>Import Sample Data <code>Database.sql</code> File your Database</li>
+										</ol><hr/>
+
+										<h6 class="text-uppercase font-weight-bold m-0">Step 3 (Backend Configure):</h6>
+										<p>We are used Node.js, Express.js, MySQL DB, Sequelize ORM for Backend</p>
+										<ol>
+											<li>Unzip the zip file you downloaded from the <a href="https://codecanyon.net" target="_blank">Codecanyon</a>.</li>
+											<li>Navigate to the backend folder using command prompt/powershell:<br/><code>cd SS-Accounts-Manager\backend</code> </li>
+											<li>Install dependencies by running the following command on the command prompt: <br/><code>npm install</code></li>
+											<li>Configure the .env file according:<br/>
+												<code>
+													APP_NAME                = ''<br/>
+													PORT                    = '' Example: 4000<br/>
+													BASE_URL                = '' Example: http://localhost<br/><br/>
+
+													MYSQL_DB_HOST_NAME      = localhost<br/>
+													MYSQL_DB_NAME           = '' Example: accounts<br/>
+													MYSQL_DB_USER_NAME      = root<br/>
+													MYSQL_DB_PASSWORD       =<br/><br/>
+
+													MYSQL_POOL_MAX          = 5<br/>
+													MYSQL_POOL_MIN          = 0<br/>
+													MYSQL_POOL_ACQUIRE      = 30000<br/>
+													MYSQL_POOL_IDLE         = 10000<br/><br/>
+
+													ACCESS_TOKEN_SECRET     =<br/>
+													REFRESH_TOKEN_SECRET    =<br/>
+													TOKEN_EXPIRE_TIME       = 30d<br/><br/>
+
+													SMTP_HOST               = smtp.gmail.com<br/>
+													SMTP_PORT               = 465<br/>
+													SMTP_SERVICE            = gmail<br/>
+													SMTP_MAIL               =<br/>
+													SMTP_PASSWORD           =<br/>
+													SMTP_FROM_MAIL          =<br/>
+												</code>
+											</li>
+											<li>Navigate to the root of backend folder where index.js is located and Start the backend server from command prompt:
+												<br/><code>npm start</code>
+											</li>
+											<li>Go to Browser and enter following code:
+												<br/><code>http://localhost:4000</code> or <code>http://localhost:custom port</code><br/>
+												You get Message <br/>
+												<code>{ message: "Welcome to Server Application." }</code>
+											</li>
+										</ol><hr/>
+
+										<h6 class="text-uppercase font-weight-bold m-0">Step 4 (Frontend Configure):</h6>
+										<p>We are used React.js, Next.js, Bootstrap CSS, Google Fonts & FontAwesome Icon for Frontend</p>
+										<ol>
+											<li>Navigate to the frontend folder using command prompt/powershell:<br/><code>cd SS-Accounts-Manager\frontend</code> </li>
+											<li>Install dependencies by running the following command on the command prompt: <br/><code>npm install</code></li>
+											<li>Configure the next.config.js file according:<br/>
+												<code>
+													API_URL: '' Example: http://localhost:4000
+												</code>
+											</li>
+											<li>Navigate to the root of frontend folder from command prompt:
+												<br/><code>npm start</code>
+											</li>
+											<li>Go to Browser and enter following code:
+												<br/><code>http://localhost:3000</code> or <code>http://localhost:custom port</code>
+											</li>
+										</ol><hr/>
+
+										<h6 class="text-uppercase font-weight-bold m-0">Restart the server: </h6>
+										<p><code>pm2 restart all</code></p>
+										<p><code>pm2 list</code></p>
+										<p>Login to your account</p>
+										<b>*** Thanks ***</b>
+									</div>
+								</div>
+								<hr class="divider" />
+
+								<div class="row" id="cpanel_installation">
+									<div class="col-md-12 docs-content-inner" id="start-installation">
+										<h4 class="text-uppercase m-0">CPanel Installation</h4>
+										<p class="text-justify">Node.js is a popular, event-driven JavaScript runtime you can use to build robust web applications. If you are already familiar with creating Node.js apps, you may be wondering how to get your app onto a shared server, a hosting environment in which you are limited in customization. Node.js requires some configuration of your server environment. But now, you can use a virtual environment within your shared hosting environment that allows for the customization necessary to run your app. Learn how to set up a Node.js in cPanel below.</p>
+										<hr/>
+
+										<h6 class="text-uppercase font-weight-bold m-0">Step 1 (Environment Config):</h6>
+										<ol>
+											<li>Login to cPanel</li>
+											<li>Choose Setup Node.js App under Software<br/>
+												<img class="img-fluid" src="assets/images/install/cpanel_nodejs_app_001.png" alt="" />
+											</li>
+											<li>Click Create Application<br/>
+												<img class="img-fluid" src="assets/images/install/cpanel_nodejs_app_002.png" alt="" />
+											</li>
+											<li>Fill in the Application root field (this is the directory in which you will upload for application files)</li>
+											<li>Select your Application URL and startup file index.js</li>
+											<li>Fill in the remaining fields with your preferred values</li>
+											<li>Click Create when ready</li>
+											<li>Click to restart your application</li>
+										</ol><hr/>
+
+										<h6 class="text-uppercase font-weight-bold m-0">Step 2 (Database):</h6>
+										<ol>
+											<li>Click MySQL Database Wizard<br/>
+												<img class="img-fluid" src="assets/images/install/image02-MySQL-Database-Wizard.webp" alt="" />
+											</li>
+											<li>Enter a name for the new database and click Next Step.<br/>
+												<img class="img-fluid" src="assets/images/install/image03-Create-a-Database.webp" alt="" />
+											</li>
+											<li>Create a user for this database by entering a username and creating a password. Click Create User.<br/>
+												<img class="img-fluid" src="assets/images/install/image04-Create-Database-Users.webp.webp" alt="" />
+											</li>
+											<li>Click the All Privileges check box or select individual privileges based on your preferences for the user. Click Next Step to continue.<br/>
+												<img class="img-fluid" src="assets/images/install/image05-Add-user-to-the-database.webp" alt="" />
+											</li>
+											<li>The MySQL database is created, and the new user is added. You need the database name, username, and password for connecting scripts to the database. Click Return Home to return to the cPanel home page.<br/>
+												<img class="img-fluid" src="assets/images/install/image06-Complete-database-creation.webp" alt="" />
+											</li>
+											<li>To view your databases and make other changes, click MySQL Databases on the home page.</li>
+											<li>Go to phpMyAdmin</li>
+											<li>Click Import in the main area of phpMyAdmin</li>
+											<li>Browse for the .sql file on your computer and click to Database.sql</li>
+										</ol><hr/>
+
+										<h6 class="text-uppercase font-weight-bold m-0">Step 3 (Backend Configure):</h6>
+										<p>We are used Node.js, Express.js, MySQL DB, Sequelize ORM for Backend</p>
+										<ol>
+											<li>Unzip the zip file you downloaded from the <a href="https://codecanyon.net" target="_blank">Codecanyon</a>.</li>
+											<li>Navigate to the backend folder using command prompt/powershell:<br/><code>cd SS-Accounts-Manager\backend</code> </li>
+											<li>Install dependencies by running the following command on the command prompt: <br/><code>npm install</code></li>
+											<li>Configure the .env file according:<br/>
+												<code>
+													APP_NAME                = ''<br/>
+													PORT                    = '' Example: 80<br/>
+													BASE_URL                = '' Example: http://example.com<br/><br/>
+
+													MYSQL_DB_HOST_NAME      = localhost<br/>
+													MYSQL_DB_NAME           = '' Example: accounts<br/>
+													MYSQL_DB_USER_NAME      = root<br/>
+													MYSQL_DB_PASSWORD       = <br/><br/>
+
+													MYSQL_POOL_MAX          = 5<br/>
+													MYSQL_POOL_MIN          = 0<br/>
+													MYSQL_POOL_ACQUIRE      = 30000<br/>
+													MYSQL_POOL_IDLE         = 10000<br/><br/>
+
+													ACCESS_TOKEN_SECRET     =<br/>
+													REFRESH_TOKEN_SECRET    =<br/>
+													TOKEN_EXPIRE_TIME       = 30d<br/><br/>
+
+													SMTP_HOST               = smtp.gmail.com<br/>
+													SMTP_PORT               = 465<br/>
+													SMTP_SERVICE            = gmail<br/>
+													SMTP_MAIL               =<br/>
+													SMTP_PASSWORD           =<br/>
+													SMTP_FROM_MAIL          =<br/>
+												</code>
+											</li>
+											<li>Upload backend file to your CPanel Directory</code> </li>
+											<li>Upload backend file to your CPanel Directory</code> </li>
+											<li>Restart nodejs server</code> </li>
+											<li>Go to Browser and enter following code:
+												<br/><code>http://api.example.com</code><br/>
+												You get Message <br/>
+												<code>{ message: "Welcome to Server Application." }</code>
+											</li>
+										</ol><hr/>
+
+										<h6 class="text-uppercase font-weight-bold m-0">Step 4 (Frontend Configure):</h6>
+										<p>We are used React.js, Next.js, Bootstrap CSS, Google Fonts & FontAwesome Icon for Frontend</p>
+										<ol>
+											<li>Navigate to the frontend folder using command prompt/powershell:<br/><code>cd SS-Accounts-Manager\frontend</code> </li>
+											<li>Install dependencies by running the following command on the command prompt: <br/><code>npm install</code></li>
+											<li>Upload frontend file to your CPanel Directory</code> </li>
+											<li>Configure the next.config.js file according:<br/>
+												<code>
+													API_URL: '' Example: http://api.example.com
+												</code>
+											</li>
+											<li>Navigate frontend server from command prompt:
+												<br/><code>npm start</code>
+											</li>
+											<li>Go to Browser and enter following code:
+												<br/><code>http://example.com:3000</code> or <code>http://localhost:custom port</code>
+											</li>
+										</ol><hr/>
+
+										<h6 class="text-uppercase font-weight-bold m-0">Restart the server: </h6>
+										<p>Login to your account</p>
+										<b>*** Thanks ***</b>
+									</div>
+								</div>
+								<hr class="divider" />
+
+								<div class="row" id="gigital_ocean_installation">
+									<div class="col-md-12 docs-content-inner">
+										<h4 class="text-uppercase m-0">DigitalOcean Installation</h4><hr/>
+										<p>Supported Operating System: Windows, macOS, Ubuntu<br/> We are install on Ubuntu Server</p>
+
+										<h6 class="text-uppercase font-weight-bold m-0">Step 1 (Environment Config):</h6>
+										<ol>
+											<li>Create a DigitalOcean Account <a href="https://www.digitalocean.com" target="_blank"> https://www.digitalocean.com</a></li>
+											<li>Provide the necessary details and complete the registration process.</li>
+											<li>Create a Droplet (Virtual Server), Click on the “Create” button to create a new Droplet</li>
+											<li>Choose the desired configuration for your Droplet, such as the server size, region, and operating system. Select a Linux distribution (e.g., Ubuntu) that is compatible with Node.js.</li>
+											<li>Set a hostname for your Droplet or leave it as the default.</li>
+											<li>Click on “Create Droplet” to initiate the server creation process.</li>
+											<li>Connect to Your Droplet</li>
+											<li>Once the Droplet is created, you will receive an email with the server credentials.</li>
+											<li>Open your preferred terminal or command prompt.</li>
+											<li>Use the following command to connect to your Droplet<br/><code>ssh root@your_droplet_ip_address</code> <code>sudo apt update && sudo apt upgrade</code></li>
+											<li>Install Node.js, Node.js can be installed on your DigitalOcean Droplet using the NodeSource PPA. Execute the following commands one by one<br/><code>curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - sudo apt install -y nodejs</code></li>
+											<li>Verify Node.js Installation, Confirm that Node.js is installed correctly by checking the installed version:<code>node -v</code></li>
+											<li>Install pm2 <code>sudo npm install pm2 -g</code></li>
+										</ol><hr/>
+
+										<h6 class="text-uppercase font-weight-bold m-0">Step 2 (Database):</h6>
+										<p>We are used MySQL Database.<br/>MySQL is a widely used relational database management system (RDBMS),  MySQL is free and open-source, MySQL is ideal for both small and large applications.</p>
+										<ol>
+											<li>Install phpMyAdmin <code>sudo apt update</code><br/><code>sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl</code>
+											<code>sudo mysql</code> <code>mysql -u root -p</code> <code>UNINSTALL COMPONENT "file://component_validate_password";</code><br/>
+											<code>exit</code> <code>sudo apt install phpmyadmin</code> <code>INSTALL COMPONENT "file://component_validate_password";</code><br/>
+											<code>sudo phpenmod mbstring</code>
+											<code>sudo systemctl restart apache2</code> <code>sudo mysql</code> <code>SELECT user,authentication_string,plugin,host FROM mysql.user;</code>
+											</li>
+											<li>Create a Database like as <code>accounts</code></li>
+											<li>Import Sample Data <code>Database.sql</code> File your Database</li>
+										</ol><hr/>
+
+										<h6 class="text-uppercase font-weight-bold m-0">Step 3 (Backend Configure):</h6>
+										<p>We are used Node.js, Express.js, MySQL DB, Sequelize ORM for Backend</p>
+										<ol>
+											<li>Unzip the zip file you downloaded from the <a href="https://codecanyon.net" target="_blank">Codecanyon</a>.</li>
+											<li>Upload backend folder</li>
+											<li>Install dependencies by running the following command on the command prompt: <br/><code>npm install</code></li>
+											<li>Configure the .env file according:<br/>
+												<code>
+													APP_NAME                = ''<br/>
+													PORT                    = '' Example: 80<br/>
+													BASE_URL                = '' Example: http://example.com<br/><br/>
+
+													MYSQL_DB_HOST_NAME      = localhost<br/>
+													MYSQL_DB_NAME           = '' Example: accounts<br/>
+													MYSQL_DB_USER_NAME      = root<br/>
+													MYSQL_DB_PASSWORD       =<br/><br/>
+
+													MYSQL_POOL_MAX          = 5<br/>
+													MYSQL_POOL_MIN          = 0<br/>
+													MYSQL_POOL_ACQUIRE      = 30000<br/>
+													MYSQL_POOL_IDLE         = 10000<br/><br/>
+
+													ACCESS_TOKEN_SECRET     =<br/>
+													REFRESH_TOKEN_SECRET    =<br/>
+													TOKEN_EXPIRE_TIME       = 30d<br/><br/>
+
+													SMTP_HOST               = smtp.gmail.com<br/>
+													SMTP_PORT               = 465<br/>
+													SMTP_SERVICE            = gmail<br/>
+													SMTP_MAIL               =<br/>
+													SMTP_PASSWORD           =<br/>
+													SMTP_FROM_MAIL          =<br/>
+												</code>
+											</li>
+											<li>Navigate to the root of backend folder where index.js is located and Start the backend server from command prompt:
+												<br/><code>npm start</code>
+											</li>
+											<li>Go to Browser and enter following code:
+												<br/><code>http://api.example.com:4000</code> or <code>http://api.example.com:custom port</code><br/>
+												You get Message <br/>
+												<code>{ message: "Welcome to Server Application." }</code>
+											</li>
+										</ol><hr/>
+
+										<h6 class="text-uppercase font-weight-bold m-0">Step 4 (Frontend Configure):</h6>
+										<p>We are used React.js, Next.js, Bootstrap CSS, Google Fonts & FontAwesome Icon for Frontend</p>
+										<ol>
+											<li>Upload frontend folder</code> </li>
+											<li>Install dependencies by running the following command on the command prompt: <br/><code>npm install</code></li>
+											<li>Configure the next.config.js file according:<br/>
+												<code>
+													API_URL: '' Example: http://api.example.com:
+												</code>
+											</li>
+											<li>Navigate to the root of frontend folder and Start the server server from command prompt:
+												<br/><code>npm start</code>
+											</li>
+											<li>Go to Browser and enter following code:
+												<br/><code>http://example.com</code> or <code>http://example.com:custom port</code>
+											</li>
+										</ol><hr/>
+
+										<h6 class="text-uppercase font-weight-bold m-0">Restart the server: </h6>
+										<p>Login to your account</p>
+										<b>*** Thanks ***</b>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<hr class="divider" />
+						<section id="login">
+							<h2 class="text-uppercase text-success m-0">Run Application</h2><hr/>
+
+							<ul>
+								<li>Backend API<code>http://localhost:4000</code> or <code>http://api.example.com</code></li>
+								<li>Frontend<code>http://localhost:3000</code> or <code>http://example.com/login</code></li>
+							</ul>
+						</section>
+
+						<hr class="divider" />
+						<section id="about">
+							<div class="row">
+								<div class="col-sm-6 col-lg-6">
+									<ul class="list-unstyled">
+										<li><strong>Item Name:</strong> SS ACCOUNTS MANAGER (SAM)</li>
+										<li>
+										<strong>Author:</strong>
+										<a href="http://www.ssitvillage.com/" target="_blank">SS IT Village</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-sm-6 col-lg-6">
+									<ul class="list-unstyled">
+										<li><strong class="font-weight-700">Release:</strong> 2023</li>
+										<li><strong>Version:</strong> 1.0.0</li>
+									</ul>
+								</div>
+							</div>
+							<p class="alert alert-info">
+								If you have any questions that are beyond the scope of this help file, Please feel free to email via
+								<a href="mainto:support@ssitvillage.com">support@ssitvillage.com</a>.
+							</p>
+						</section>
+					</div>
+				</div>
+				<footer id="footer" class="section bg-dark footer-text-light">
+					<div class="container">
+						<p class="text-center"> Copyright &copy; 2023 All Rights Reserved <a href="https://accounts.ssitvillage.com/" target="_blank">SS Accounts Manager </a></p>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+
+		<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
+
+		<script src="assets/plugin/jquery/jquery.min.js"></script>
+		<script src="assets/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<script src="assets/plugin/highlight.js/highlight.min.js"></script>
+
+		<script src="assets/plugin/jquery.easing/jquery.easing.min.js"></script>
+
+		<script src="assets/plugin/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+		<script src="assets/js/theme.js"></script>
+	</body>
+</html>

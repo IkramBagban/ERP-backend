@@ -1,0 +1,4558 @@
+{
+	"info": {
+		"_postman_id": "bfc0ac94-e1b8-4916-a779-7cd5411860cd",
+		"name": "SS Accounts Manager (SAM)",
+		"description": "**SS ACCOUNTS MANAGER (SSAM)** is Software as a Service (SaaS) base complete accounts solution. It is Financial Accounts Software. It’s developed by React.js, Next.js, Bootstrap CSS, HTML5 on **Frontend** and Rest API integration with Node.js, Express.js and MySQL Database Sequelize ORM on **Backend**. This software has unlimited Company, Branch, Users and multiple Role base Super Admin, System Admin, Company Admin and Accounts User.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19859449",
+		"_collection_link": "https://winter-comet-591493.postman.co/workspace/e8aa0e27-c978-47bf-9b8a-30ba40357199/collection/19859449-bfc0ac94-e1b8-4916-a779-7cd5411860cd?action=share&source=collection_link&creator=19859449"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\": \"Wadudur Rahman\",\r\n    \"username\": \"01729764728\",\r\n    \"password\": \"123456\",\r\n    \"user_designation\": \"IT Officer\",\r\n    \"user_phone\": \"01729764728\",\r\n    \"user_email\": \"wadud101014@gmail.com\",\r\n    \"user_address\": \"abc\",\r\n    \"user_company\": \"0\",\r\n    \"user_branch\": \"0\",\r\n    \"user_group\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/user-create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"user-create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"01729764728\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/logout/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"logout",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/user-list?company=1&branch=1&status=all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"user-list"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/get-user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"get-user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User List Active",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/user-list-active?company=all&branch=all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"user-list-active"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "all"
+								},
+								{
+									"key": "branch",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"user_name\": \"Wadud\",\r\n    \"user_designation\": \"IT Officer\",\r\n    \"user_phone\": \"01729764728\",\r\n    \"user_email\": \"wadud101014@gmail.com\",\r\n    \"user_address\": \"Address-3\",\r\n    \"user_company\": \"0\",\r\n    \"user_branch\": \"0\",\r\n    \"user_group\": \"1\",\r\n    \"user_status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/user-update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"user-update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"user_name\": \"Wadud\",\r\n    \"user_designation\": \"IT Officer\",\r\n    \"user_phone\": \"01729764728\",\r\n    \"user_email\": \"wadud101014@gmail.com\",\r\n    \"user_address\": \"Address\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/profile-update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"profile-update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/user-delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"user-delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Profile Picture",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_picture",
+									"type": "file",
+									"src": "S1D4Mt7aR/e88bdbb6-0625-45e5-bf8e-076661e89739.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/change-profile-picture/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"change-profile-picture",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password Verify",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone_email\": \"0172976t4728\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/reset-password-verify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"reset-password-verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"phone_email\": \"01729764728\",\r\n    \"password\": \"123456\",\r\n    \"c_password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/reset-password/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"reset-password",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"current_password\": \"01729764728\",\r\n    \"password\": \"123456\",\r\n    \"c_password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/change-password/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"change-password",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Count",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/user-count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"user-count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Count Company",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/user-count-company/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"user-count-company",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Count Branch",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/user-count-branch/?company=1&branch=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"user-count-branch",
+								""
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Group",
+			"item": [
+				{
+					"name": "User Group List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/user-group-list?status=all&search=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"user-group-list"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "all"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Group List Active",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/user-group-list-active/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"user-group-list-active",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Group",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/get-user-group/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"get-user-group",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Group Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_group_code\": \"accounts_type_code\",\r\n    \"user_group_name\": \"accounts_type_name\",\r\n    \"user_group_status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/user-group-create/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"user-group-create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Group Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_group_code\": \"accounts_type_code\",\r\n    \"user_group_name\": \"accounts_type_name\",\r\n    \"user_group_status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/user-group-update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"user-group-update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Group Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/user-group-delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"user-group-delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Settings",
+			"item": [
+				{
+					"name": "System Setting",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/settings/system-setting",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"settings",
+								"system-setting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "System Setting Create/Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"system_title\":\"Pundra University\",\r\n    \"system_name\":\"Pundra University\",\r\n    \"system_address\":\"Bogura\",\r\n    \"system_phone\":\"01729764728\",\r\n    \"system_email\":\"wadud101014@gmail.com\",\r\n    \"system_website\":\"www.pundrauniversity.ac.bd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/settings/system-setting-create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"settings",
+								"system-setting-create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "System Logo Change",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "system_picture",
+									"type": "file",
+									"src": "8ZwhTQKS_/dean-fse.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/settings/system-logo-change",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"settings",
+								"system-logo-change"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Language",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/settings/get-user-language/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"settings",
+								"get-user-language",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change User Language",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_language\": \"en\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/settings/change-user-language/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"settings",
+								"change-user-language",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Theme",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/settings/get-user-theme/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"settings",
+								"get-user-theme",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change User Theme",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_theme\" : \"blue\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/settings/change-user-theme/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"settings",
+								"change-user-theme",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Company List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/company/company-list?status=all&search=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company",
+								"company-list"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "all"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company List Active",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/company/company-list-active",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company",
+								"company-list-active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Company",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/company/get-company/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company",
+								"get-company",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "company_name",
+									"value": "company_name",
+									"type": "text"
+								},
+								{
+									"key": "company_owner_name",
+									"value": "company_owner_name",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "username",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "company_phone",
+									"value": "company_phone",
+									"type": "text"
+								},
+								{
+									"key": "company_email",
+									"value": "company_email",
+									"type": "text"
+								},
+								{
+									"key": "company_website",
+									"value": "company_website",
+									"type": "text"
+								},
+								{
+									"key": "company_address",
+									"value": "company_address",
+									"type": "text"
+								},
+								{
+									"key": "company_opening_date",
+									"value": "company_opening_date",
+									"type": "text"
+								},
+								{
+									"key": "company_picture",
+									"type": "file",
+									"src": "7FyRR0002/faculty-icon.png"
+								},
+								{
+									"key": "company_status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/company/company-create/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company",
+								"company-create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "company_name",
+									"value": "company_name",
+									"type": "text"
+								},
+								{
+									"key": "company_owner_name",
+									"value": "company_owner_name",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "username",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "company_phone",
+									"value": "company_phone",
+									"type": "text"
+								},
+								{
+									"key": "company_email",
+									"value": "company_email",
+									"type": "text"
+								},
+								{
+									"key": "company_website",
+									"value": "company_website",
+									"type": "text"
+								},
+								{
+									"key": "company_address",
+									"value": "company_address",
+									"type": "text"
+								},
+								{
+									"key": "company_opening_date",
+									"value": "company_opening_date",
+									"type": "text"
+								},
+								{
+									"key": "company_picture",
+									"type": "file",
+									"src": "7FyRR0002/faculty-icon.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/company/company-register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company",
+								"company-register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "company_name",
+									"value": "company_name",
+									"type": "text"
+								},
+								{
+									"key": "company_owner_name",
+									"value": "company_owner_name",
+									"type": "text"
+								},
+								{
+									"key": "company_phone",
+									"value": "company_phone",
+									"type": "text"
+								},
+								{
+									"key": "company_email",
+									"value": "company_email",
+									"type": "text"
+								},
+								{
+									"key": "company_website",
+									"value": "company_website",
+									"type": "text"
+								},
+								{
+									"key": "company_address",
+									"value": "company_address",
+									"type": "text"
+								},
+								{
+									"key": "company_opening_date",
+									"value": "company_opening_date",
+									"type": "text"
+								},
+								{
+									"key": "company_status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "company_picture_old",
+									"value": "assets/images/company/company-icon.png",
+									"type": "text"
+								},
+								{
+									"key": "company_picture",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/company/company-update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company",
+								"company-update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/company/company-delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company",
+								"company-delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company Count",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/company/company-count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company",
+								"company-count"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company Package",
+			"item": [
+				{
+					"name": "Company Package List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/company-package/company-package-list?status=all&search=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company-package",
+								"company-package-list"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "all"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company Package List Active",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/company-package/company-package-list-active/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company-package",
+								"company-package-list-active",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Company Package",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/company-package/get-company-package/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company-package",
+								"get-company-package",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company Package Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"company_package_code\": \"P1\",\r\n    \"company_package_name\": \"Package-1\",\r\n    \"company_package_status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/company-package/company-package-create/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company-package",
+								"company-package-create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company Package Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"company_package_code\": \"P1\",\r\n    \"company_package_name\": \"Package-1\",\r\n    \"company_package_status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/company-package/company-package-update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company-package",
+								"company-package-update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company Package Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/company-package/company-package-delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company-package",
+								"company-package-delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Branch",
+			"item": [
+				{
+					"name": "Branch List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/branch/branch-list?company=1&status=all&search=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"branch",
+								"branch-list"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "all"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Branch List Active",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/branch/branch-list-active/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"branch",
+								"branch-list-active",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Branch",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/branch/get-branch/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"branch",
+								"get-branch",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Branch Company",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/branch/get-branch-company/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"branch",
+								"get-branch-company",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Branch Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"branch_company\": \"1\",\r\n    \"branch_code\": \"branch_code\",\r\n    \"branch_name\": \"branch_name\",\r\n    \"branch_phone\": \"branch_phone\",\r\n    \"branch_email\": \"branch_email\",\r\n    \"branch_address\": \"branch_address\",\r\n    \"branch_opening_date\": \"branch_opening_date\",\r\n    \"branch_status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/branch/branch-create/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"branch",
+								"branch-create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Branch Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"branch_company\": \"1\",\r\n    \"branch_name\": \"branch_name\",\r\n    \"branch_phone\": \"branch_phone\",\r\n    \"branch_email\": \"branch_email\",\r\n    \"branch_address\": \"branch_address\",\r\n    \"branch_opening_date\": \"branch_opening_date\",\r\n    \"branch_status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/branch/branch-update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"branch",
+								"branch-update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Branch Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/branch/btanch-delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"branch",
+								"btanch-delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Branch Count",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/branch/branch-count/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"branch",
+								"branch-count",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Branch Count Company",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/branch/branch-count-company/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"branch",
+								"branch-count-company",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chart of Accounts",
+			"item": [
+				{
+					"name": "Chart of Accounts List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/chart-of-accounts/chart-of-accounts-list?company=1&status=all&search=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"chart-of-accounts",
+								"chart-of-accounts-list"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "all"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chart of Accounts Search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/chart-of-accounts/chart-of-accounts-search?company=1&search=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"chart-of-accounts",
+								"chart-of-accounts-search"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chart of Accounts List Active",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/chart-of-accounts/chart-of-accounts-list-active/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"chart-of-accounts",
+								"chart-of-accounts-list-active",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chart of Accounts List Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/chart-of-accounts/chart-of-accounts-list-show/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"chart-of-accounts",
+								"chart-of-accounts-list-show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Chart of Accounts Type",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/chart-of-accounts/get-chart-of-accounts-type/10000000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"chart-of-accounts",
+								"get-chart-of-accounts-type",
+								"10000000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Chart of Accounts Control Group",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/chart-of-accounts/get-chart-of-accounts-control-group/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"chart-of-accounts",
+								"get-chart-of-accounts-control-group",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Chart of Accounts General Ledger",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/chart-of-accounts/get-chart-of-accounts-general-ledger/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"chart-of-accounts",
+								"get-chart-of-accounts-general-ledger",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Chart of Accounts Category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/chart-of-accounts/get-chart-of-accounts-category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"chart-of-accounts",
+								"get-chart-of-accounts-category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Chart of Accounts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/chart-of-accounts/get-chart-of-accounts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"chart-of-accounts",
+								"get-chart-of-accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chart of Accounts Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chart_of_accounts_company\": \"chart_of_accounts_company\",\r\n    \"chart_of_accounts_code\": \"chart_of_accounts_code\",\r\n    \"chart_of_accounts_name\": \"accounts_type_name\",\r\n    \"chart_of_accounts_accounts_category\": \"1\",\r\n    \"chart_of_accounts_status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/chart-of-accounts/chart-of-accounts-create/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"chart-of-accounts",
+								"chart-of-accounts-create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts Type Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chart_of_accounts_company\": \"chart_of_accounts_company\",\r\n    \"chart_of_accounts_code\": \"chart_of_accounts_code\",\r\n    \"chart_of_accounts_name\": \"accounts_type_name\",\r\n    \"chart_of_accounts_accounts_category\": \"1\",\r\n    \"chart_of_accounts_status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts-type/accounts-type-update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts-type",
+								"accounts-type-update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts Type Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts-type/accounts-type-delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts-type",
+								"accounts-type-delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accounts Type",
+			"item": [
+				{
+					"name": "Accounts Type List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts-type/accounts-type-list?status=all&search=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts-type",
+								"accounts-type-list"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "all"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts Type List Active",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts-type/accounts-type-list-active/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts-type",
+								"accounts-type-list-active",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Accounts Type",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts-type/get-accounts-type/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts-type",
+								"get-accounts-type",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts Type Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accounts_type_code\": \"accounts_type_code\",\r\n    \"accounts_type_name\": \"accounts_type_name\",\r\n    \"accounts_type_status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts-type/accounts-type-create/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts-type",
+								"accounts-type-create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts Type Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accounts_type_code\": \"accounts_type_code\",\r\n    \"accounts_type_name\": \"accounts_type_name\",\r\n    \"accounts_type_status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts-type/accounts-type-update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts-type",
+								"accounts-type-update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts Type Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts-type/accounts-type-delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts-type",
+								"accounts-type-delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accounts Link",
+			"item": [
+				{
+					"name": "Accounts Link List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts-link/accounts-link-list?company=1&status=all&search=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts-link",
+								"accounts-link-list"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "all"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts Link List Active",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts-link/accounts-link-list-active/?company=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts-link",
+								"accounts-link-list-active",
+								""
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Accounts Link",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts-link/get-accounts-link/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts-link",
+								"get-accounts-link",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts Link Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accounts_link_company\": \"1\",\r\n    \"accounts_link_code\": \"balance_sheet\",\r\n    \"accounts_link_name\": \"Balance Sheet\",\r\n    \"accounts_link_accounts\": \"1\",\r\n    \"accounts_link_status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts-link/accounts-link-create/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts-link",
+								"accounts-link-create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts Link Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accounts_link_company\": \"1\",\r\n    \"accounts_link_code\": \"balance_sheet\",\r\n    \"accounts_link_name\": \"Balance Sheet\",\r\n    \"accounts_link_accounts\": \"1\",\r\n    \"accounts_link_status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts-link/accounts-link-update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts-link",
+								"accounts-link-update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts Link Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts-link/accounts-link-delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts-link",
+								"accounts-link-delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Financial Year",
+			"item": [
+				{
+					"name": "Financial Year List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/financial-year/financial-year-list?company=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"financial-year",
+								"financial-year-list"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Financial Year List Active",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/financial-year/financial-year-list-active?company=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"financial-year",
+								"financial-year-list-active"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Financial Year",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/financial-year/get-financial-year/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"financial-year",
+								"get-financial-year",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Financial Year Create/Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"financial_year_company\": \"1\",\r\n    \"financial_year_starting_month\": \"07\",\r\n    \"financial_year_closing_month\": \"06\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/financial-year/financial-year-create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"financial-year",
+								"financial-year-create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Voucher Type",
+			"item": [
+				{
+					"name": "Voucher Type List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/voucher-type/voucher-type-list?status=all&search=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"voucher-type",
+								"voucher-type-list"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "all"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voucher Type List Active",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/voucher-type/voucher-type-list-active/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"voucher-type",
+								"voucher-type-list-active",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Voucher Type",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/voucher-type/get-voucher-type/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"voucher-type",
+								"get-voucher-type",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voucher Type Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"voucher_type_code\": \"RV\",\r\n    \"voucher_type_name\": \"Receive Voucher\",\r\n    \"voucher_type_status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/voucher-type/voucher-type-create/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"voucher-type",
+								"voucher-type-create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voucher Type Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"voucher_type_code\": \"RV\",\r\n    \"voucher_type_name\": \"Receive Voucher\",\r\n    \"voucher_type_status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/voucher-type/voucher-type-update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"voucher-type",
+								"voucher-type-update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voucher Type Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/voucher-type/voucher-type-delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"voucher-type",
+								"voucher-type-delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vouchers",
+			"item": [
+				{
+					"name": "Voucher List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts/voucher-list?company=1&branch=1&from_date=2023-10-01&to_date=2023-11-04&voucher_number=&voucher_type=all&status=all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"voucher-list"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "from_date",
+									"value": "2023-10-01"
+								},
+								{
+									"key": "to_date",
+									"value": "2023-11-04"
+								},
+								{
+									"key": "voucher_number",
+									"value": ""
+								},
+								{
+									"key": "voucher_type",
+									"value": "all"
+								},
+								{
+									"key": "status",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voucher Search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts/voucher-search?company=1&branch=1&voucher_number=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"voucher-search"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "voucher_number",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voucher List Active",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts/voucher-list-active/?company=1&branch=1&from_date=2023-10-01&to_date=2023-11-03&voucher_type=all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"voucher-list-active",
+								""
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "from_date",
+									"value": "2023-10-01"
+								},
+								{
+									"key": "to_date",
+									"value": "2023-11-03"
+								},
+								{
+									"key": "voucher_type",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voucher List Latest 10",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts/voucher-list-latest/?company=1&branch=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"voucher-list-latest",
+								""
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Voucher",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts/get-voucher/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"get-voucher",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voucher Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountsFormData\": {\r\n        \"accounts_company\": \"1\",\r\n        \"accounts_branch\": \"1\",\r\n        \"accounts_posting_date\": \"2023-11-03\",\r\n        \"accounts_voucher_type\": \"2\",\r\n        \"accounts_narration\": \"Cash\",\r\n        \"accounts_total_debit\": \"1000\",\r\n        \"accounts_total_credit\": \"1000\"\r\n    },\r\n    \"accounts_list\": [\r\n        {\r\n            \"coa_id\"      : 20,\r\n            \"coa_code\"    : \"10101101\",\r\n            \"coa_name\"    : \"Property Purchase\",\r\n            \"coa_code_gl\" : \"10101100\",\r\n            \"coa_name_gl\" : \"Property\",\r\n            \"debit\"       : \"1000\",\r\n            \"credit\"      : \"0\"\r\n        },\r\n        {\r\n            \"coa_id\"      : 16,\r\n            \"coa_code\"    : \"10201101\",\r\n            \"coa_name\"    : \"Cash\",\r\n            \"coa_code_gl\" : \"10201100\",\r\n            \"coa_name_gl\" : \"Cash in Hand\",\r\n            \"debit\"       : \"0\",\r\n            \"credit\"      : \"1000\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts/voucher-create/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"voucher-create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voucher Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountsFormData\": {\r\n        \"accounts_company\": \"1\",\r\n        \"accounts_branch\": \"1\",\r\n        \"accounts_posting_date\": \"2023-11-03\",\r\n        \"accounts_voucher_number\": \"PV-0000003\",\r\n        \"accounts_narration\": \"Cash\",\r\n        \"accounts_total_debit\": \"1000\",\r\n        \"accounts_total_credit\": \"1000\",\r\n        \"accounts_status\": 1\r\n    },\r\n    \"accounts_list\": [\r\n        {\r\n            \"coa_id\"      : 20,\r\n            \"coa_code\"    : \"10101101\",\r\n            \"coa_name\"    : \"Property Purchase\",\r\n            \"coa_code_gl\" : \"10101100\",\r\n            \"coa_name_gl\" : \"Property\",\r\n            \"debit\"       : \"1000\",\r\n            \"credit\"      : \"0\"\r\n        },\r\n        {\r\n            \"coa_id\"      : 16,\r\n            \"coa_code\"    : \"10201101\",\r\n            \"coa_name\"    : \"Cash\",\r\n            \"coa_code_gl\" : \"10201100\",\r\n            \"coa_name_gl\" : \"Cash in Hand\",\r\n            \"debit\"       : \"0\",\r\n            \"credit\"      : \"1000\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts/voucher-update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"voucher-update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voucher Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/accounts/voucher-delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"voucher-delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accounts Report",
+			"item": [
+				{
+					"name": "Ledger Report",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/ledger-report?company=1&branch=1&control_group=13&general_ledger=49&subsidiary_ledger=121&starting_date=2023-11-16&closing_date=2023-11-30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"ledger-report"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "control_group",
+									"value": "13"
+								},
+								{
+									"key": "general_ledger",
+									"value": "49"
+								},
+								{
+									"key": "subsidiary_ledger",
+									"value": "121"
+								},
+								{
+									"key": "starting_date",
+									"value": "2023-11-16"
+								},
+								{
+									"key": "closing_date",
+									"value": "2023-11-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Balance Sheet",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/balance-sheet?company=1&branch=1&closing_month=November-2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"balance-sheet"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "closing_month",
+									"value": "November-2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Balance Sheet Note",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/balance-sheet-note?company=1&branch=1&closing_month=November-2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"balance-sheet-note"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "closing_month",
+									"value": "November-2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Balance Sheet Note Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/get-balance-sheet-note?note=1&company=1&branch=1&closing_month=November-2023&coa=49",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"get-balance-sheet-note"
+							],
+							"query": [
+								{
+									"key": "note",
+									"value": "1"
+								},
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "closing_month",
+									"value": "November-2023"
+								},
+								{
+									"key": "coa",
+									"value": "49"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Income Expenditure Note",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/get-income-expenditure-note?note=1&company=1&branch=1&closing_month=November-2023&coa=49",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"get-income-expenditure-note"
+							],
+							"query": [
+								{
+									"key": "note",
+									"value": "1"
+								},
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "closing_month",
+									"value": "November-2023"
+								},
+								{
+									"key": "coa",
+									"value": "49"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Income Expenditure",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/income-expenditure?company=1&branch=1&closing_month=November-2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"income-expenditure"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "closing_month",
+									"value": "November-2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Income Expenditure Note",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/income-expenditure-note?company=1&branch=1&closing_month=November-2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"income-expenditure-note"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "closing_month",
+									"value": "November-2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Receipts Payments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/receipts-payments?company=1&branch=1&starting_date=2023-01-01&closing_date=2023-11-07",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"receipts-payments"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "starting_date",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "closing_date",
+									"value": "2023-11-07"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cash Book",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/cash-book?company=1&branch=1&starting_date=2023-01-01&closing_date=2023-11-07",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"cash-book"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "starting_date",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "closing_date",
+									"value": "2023-11-07"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bank Book",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/bank-book?company=1&branch=1&starting_date=2023-01-01&closing_date=2023-11-30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"bank-book"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "starting_date",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "closing_date",
+									"value": "2023-11-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trial Balance",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/trial-balance?company=1&branch=1&closing_date=2023-11-07",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"trial-balance"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "closing_date",
+									"value": "2023-11-07"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Changes in Equity",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/changes-in-equity?company=1&branch=1&closing_month=November-2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"changes-in-equity"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								},
+								{
+									"key": "closing_month",
+									"value": "November-2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cash Balance Company",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/cash-balance-company/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"cash-balance-company",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bank Balance Company",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/bank-balance-company/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"bank-balance-company",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cash Balance Branch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/cash-balance-branch/?company=1&branch=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"cash-balance-branch",
+								""
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bank Balance Branch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTc4ODAzMjgsImV4cCI6MTcwMDQ3MjMyOH0.E-r8nATsXv380C_EXzOqMKprem8MO2WuReQudWMEfvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/accounts/bank-balance-branch/?company=1&branch=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"accounts",
+								"bank-balance-branch",
+								""
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "1"
+								},
+								{
+									"key": "branch",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
